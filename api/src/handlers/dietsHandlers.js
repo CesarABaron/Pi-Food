@@ -1,4 +1,4 @@
-const {getDietsController} = require()
+const {getDietsController} = require("../controllers/getDietController")
 
 
 const getDietsHandler = async (req, res) =>{
@@ -14,3 +14,6 @@ try {
 
 }
 
+
+
+module.exports={getDietsHandler}

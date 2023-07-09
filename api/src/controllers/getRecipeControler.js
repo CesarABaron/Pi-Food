@@ -1,5 +1,5 @@
 const axios = require("axios")
-const {Recipe} = require ("../db")
+const {Recipe,Diets} = require ("../db")
 const {apiFilter} = require("../Tools/filterRecipes")
 const {API_KEY} = process.env;
 const {Op} = require("sequelize")
@@ -61,12 +61,35 @@ const getAllRecipesController = async () => {
 
 }
 
+const createRecipeController = async (name,image,plateResume,healthScore,stepByStep,myDiets) =>{
+const recipe = await Recipe.create({
+    name:name,
+    image:image,
+    plateResume:plateResume,
+    healthScore:healthScore,
+    stepByStep:stepByStep,
+    myDiets:myDiets
+})
+
+for(let i=0; i<myDiets.length ; i++){
+    const dietId = (await Diets.findOne({
+        where: {
+            name:myDiets[i]
+        }
+    })).id 
+    await recipe.addDiets(dietId)
+}
+
+
+}
+
 
 
 module.exports ={
     getRecipeByIdController,
     getAllRecipesController,
     getRecipeByNameController,
+    createRecipeController
 }
 
 
