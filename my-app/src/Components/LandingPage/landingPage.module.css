@@ -3,7 +3,20 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: bisque;
+    background-image: url("../Assets/fondo.jpg");
     height: 100vh;
-    width: 100%;
+    width: 100vw;
+    background-size: cover;
+    background-position: center;
+    margin-top: 0px;
+    
+}
+
+
+
+.title{
+    margin-top: 40vh;
+    height: 5vh;
+    width: 10vh;
+    border-radius: 5px;
 }
