@@ -9,6 +9,7 @@ function Cards({ recipes }) {
     <div className={style.container}>
       {recipeList?.map((recipe) => (
         <Card
+        id={recipe.id}
           key={recipe.id}
           image={recipe.image}
           name={recipe.name}

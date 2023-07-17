@@ -1,8 +1,8 @@
-import { GET_RECIPES } from "./actions";
+import { GET_RECIPES, GET_RECIPE_BY_NAME,GET_RECIPE_BY_ID } from "./actions";
 
 
 
-let inicialState = {recipes:[], diets :[]}
+let inicialState = {recipes:[], diets :[], detailRecipe:[]}
 
 
 function rootReducer(state= inicialState, action){
@@ -13,7 +13,24 @@ function rootReducer(state= inicialState, action){
             recipes: action.payload,
           }
 
-        default:
+
+
+        case GET_RECIPE_BY_NAME:
+          return{
+            ...state,
+            recipes:action.payload
+          }
+        
+
+          case GET_RECIPE_BY_ID:
+          return{
+            ...state,
+            detailRecipe:action.payload
+
+          }
+
+
+          default:
             return {
               ...state,
             };

@@ -10,8 +10,27 @@ import Form from "./Components/FormPage/form.component";
 
 
 function App() {
+
+  // const [searchString, setSearchStrung] = useState(""); 
+
+
+  //   function handleChange(e){
+  //       e.preventDefault();
+  //       searchString(e.target.value)
+  //   }
+
+
+  //   function handleSubmit(e){
+  //       e.preventDefault();
+  //       dispatch(getRecipesById(searchString))
+
+  //   }
+
+  const location = useLocation();
+
   return (
 <div >
+{location.pathname !== "/" && <NavBar />}
 
 
 <Routes>     
