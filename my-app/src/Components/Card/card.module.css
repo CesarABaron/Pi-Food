@@ -4,13 +4,17 @@
     font-size: x-small;
     padding: 1vh;
     margin: 1vh;
+    margin-bottom: 50px;
+    margin-left: 3vh;
     border: solid black;
-    height: 40vh;
-    width: 20vw;
+    height: 50vh;
+    width: 25vw;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    border-radius: 10vh;
+ 
     
 }
 

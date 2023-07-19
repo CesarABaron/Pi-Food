@@ -7,7 +7,7 @@ import { useLocation } from "react-router-dom";
 import NavBar from "./Components/NavBar/navBar.component";
 import Detail from "./Components/DetailPage/detail.component";
 import Form from "./Components/FormPage/form.component";
-
+import style from "./App.module.css"
 
 function App() {
 
@@ -29,7 +29,7 @@ function App() {
   const location = useLocation();
 
   return (
-<div >
+<div className={style.global}>
 {location.pathname !== "/" && <NavBar />}
 
 

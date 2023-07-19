@@ -72,12 +72,15 @@ const recipe = await Recipe.create({
 })
 
 for(let i=0; i<myDiets.length ; i++){
+   
     const dietId = (await Diets.findOne({
         where: {
             name:myDiets[i]
         }
     })).id 
+   
     await recipe.addDiets(dietId)
+   
 }
 
 

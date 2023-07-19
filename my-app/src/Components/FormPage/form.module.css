@@ -1,0 +1,50 @@
+.contenedor{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+
+.form{
+    background-color: #074f02;
+    padding: 10vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10vh;
+}
+
+
+.boton{
+    height: 5vh;
+    width: 20%;
+}
+
+
+.inputContainer {
+    margin-bottom: 20px;
+  }
+
+
+  .error{
+    color: red;
+  }
+
+
+  .boton{
+    padding: 1em 2em;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    color: #2caf63;
+    transition: all 1000ms;
+    font-size: 10px;
+    position: relative;
+    top:5vh;
+    overflow: hidden;
+    outline: 2px solid #0e9114;
+  }

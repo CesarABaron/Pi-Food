@@ -3,14 +3,15 @@ import { Link } from 'react-router-dom';
 
 
 
-const Card = ({ image,name,healthScore,id }) => {
+const Card = ({ image,name,myDiets,id }) => {
 
  return (
     <div className={style.cardC}>
-      <Link to={`/home/${id}`} >  
-      <h2>Nombre: {name}</h2>
+       
+      <h2>{name}</h2>
       
-      <p>Puntuación de salud: {healthScore}</p>
+      <p>Tipos de dietas.: {myDiets}</p>
+      <Link to={`/home/${id}`} > 
       <img className={style.img} src={image} alt={name} />
       </Link>
     </div>
